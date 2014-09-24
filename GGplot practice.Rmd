@@ -1,0 +1,118 @@
+---
+title: "GGplot practice"
+output: pdf_document
+---
+White Background
+```{r}
+library(ggplot2)
+
+head(iris)
+
+ggplot(data=iris,aes(x=Sepal.Length,y=Sepal.Width))+geom_point()+theme_bw()
+```
+
+
+Increasing Point Size
+```{r}
+library(ggplot2)
+
+head(iris)
+
+ggplot(data=iris,aes(x=Sepal.Length,y=Sepal.Width))+geom_point(size=3)+theme_bw()
+```
+
+
+
+
+```{r}
+library(ggplot2)
+
+head(iris)
+
+ggplot(data=iris,aes(x=Sepal.Length,y=Sepal.Width, color= Species))+geom_point()+theme_bw()
+```
+
+```{r}
+library(ggplot2)
+
+head(iris)
+
+ggplot(data=iris,aes(x=Sepal.Length,y=Sepal.Width, color= Species))+geom_point(size= Species)+theme_bw()
+```
+
+
+```{r}
+library(ggplot2)
+
+head(iris)
+
+ggplot(data=iris,aes(x=Sepal.Length,y=Sepal.Width, color= Species))+geom_point(size= Petal.Length)+theme_bw()
+```
+
+
+```{r}
+library(ggplot2)
+
+head(iris)
+
+ggplot(data=iris,aes(x=Sepal.Length,y=Sepal.Width, color = Species))+geom_point(aes(shape =Species)+theme_bw()
+```
+
+
+Changing Shape
+```{r}
+library(ggplot2)
+
+head(iris)
+
+ggplot(data=iris,aes(x=Sepal.Length,y=Sepal.Width,color=Species,shape=Species))+geom_point(size=5)
+```
+
+
+
+```{r}
+library(ggplot2)
+
+head(iris)
+
+ggplot(data=iris,aes(x=Sepal.Length,y=Sepal.Width, color= Species))+
+  geom_point(aes(shape))+theme_bw()
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(data=iris,aes(x=Sepal.Length,y=Sepal.Width))+geom_point(size=3)+theme_bw()
+
+d2 <- diamonds[sample(1:dim(diamonds)[1], 1000), ]
+```
+
+
+
+
+```{r}
+library(ggplot2)
+head(iris)
+
+ggplot(data=iris,aes(x=Sepal.Length,y=Sepal.Width,color=Species,shape=Species))+geom_point(size=5)
+
+d2 <- diamonds[sample(1:dim(diamonds)[1], 1000), ]
+
+ggplot(d2,aes(carat,price,color=color))+geom_point()
+
+￼library(MASS)
+ggplot(birthwt, aes(factor(race), bwt)) + geom_boxplot()
+
+
+head(birthwt)
+
+?birthwt
+
+
+￼library(MASS)
+ggplot(birthwt, aes("", bwt,color=race)) + geom_boxplot()
+ggplot(birthwt, aes("", bwt,fill=factor(race))) + geom_boxplot()
+
+```
+
+
